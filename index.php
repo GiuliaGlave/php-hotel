@@ -40,6 +40,7 @@
 
     ];
 
+     
 ?>
 
 <!DOCTYPE html>
@@ -62,32 +63,29 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
+                <td> <b>Name</b> </td>
+                <td> <b>Description</b> </td>
+                <td> <b>Parking</b> </td>
+                <td> <b>Vote</b> </td>
+                <td> <b>From center</b> </td>
             </tr>
+
         </thead>
         <tbody>
+            <?php foreach($hotels as $hotel) { ?>
+
             <tr>
-                <th scope="row">1</th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td></td>
-                <td></td>
-                <td></td>
+
+                <?php foreach($hotel as $item) { ?>
+
+                <td> <?php echo $item; ?> </td>
+
+                <?php } ?>
 
             </tr>
+
+            <?php } ?>
+
         </tbody>
     </table>
 </body>
